@@ -1,14 +1,25 @@
 :root {
+  color-scheme: dark;
+
   --color-bg: #171018;
-  --color-surface: #28152e;
-  --color-surface-light: #32143f;
-
+  --color-surface: #281b2c;
+  --color-surface-hover: #35213a;
   --color-primary: #762477;
-  --color-accent: #c45a9d;
-  --color-pink: #e9a4c5;
-
+  --color-accent: #e9a4c5;
   --color-text: #f8f3f5;
   --color-text-muted: #b9a5ba;
-
   --color-border: rgb(233 164 197 / 18%);
+}
+
+.app[data-theme='light'] {
+  color-scheme: light;
+
+  --color-bg: #fbf6f8;
+  --color-surface: #fff;
+  --color-surface-hover: #f4e8ef;
+  --color-primary: #762477;
+  --color-accent: #a83f7c;
+  --color-text: #28152e;
+  --color-text-muted: #705f71;
+  --color-border: rgb(83 46 79 / 18%);
 }

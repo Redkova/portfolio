@@ -106,15 +106,9 @@ function Home() {
       <section className="skills section" id="skills">
         <div className="section-heading">
           <h2 className="section-heading__title">Tech Stack</h2>
-          <p className="section-heading__description">
-            I build modern web interfaces using HTML, CSS, JavaScript, and
-            TypeScript, with a focus on React, responsive UI development, and
-            API integration. I aim to create user-friendly, maintainable
-            interfaces while continuously expanding my technical skills.
-          </p>
         </div>
         <div className="skills__grid">
-          {skills.map((group, index) => (
+          {skills.map((group) => (
             <article className="skill-card" key={group.title}>
               <h3 className="skill-card__title">{group.title}</h3>
               <ul className="skill-card__list">
@@ -127,20 +121,10 @@ function Home() {
             </article>
           ))}
         </div>
-        {/* <div className="skills__exploring">
-          <span className="skills__exploring-label">CURRENTLY EXPLORING</span>
-
-          <div className="skills__exploring-items">
-            <span>Next.js</span>
-            <span>Server-side data fetching</span>
-            <span>Advanced React patterns</span>
-          </div>
-        </div> */}
       </section>
 
       <section className="interests section" id="interest">
         <div className="section-heading">
-          <p className="section-heading__label">BEYOND CODING</p>
           <h2 className="section-heading__title">A Little About Me</h2>
           <p className="section-heading__description">
             Outside of development, I enjoy staying active, being creative and
@@ -154,7 +138,7 @@ function Home() {
               <img
                 className="interest-card__icon"
                 src={interest.icon}
-                alt=""
+                alt="hobby"
                 aria-hidden="true"
               />
 
@@ -168,19 +152,13 @@ function Home() {
         </ul>
       </section>
 
-      <section className="home-contact section">
-        <p className="section-heading__label">LET'S CONNECT</p>
-
-        <h2 className="home-contact__title">Have a project in mind?</h2>
-
-        <p className="home-contact__description">
-          I'm always open to new opportunities, collaboration and interesting
-          challenges.
-        </p>
-
-        <a className="button button--primary" href="/contacts">
-          Get in Touch <span aria-hidden="true">↗</span>
-        </a>
+      <section className="contact section">
+        <div className="contact__content">
+          <h2 className="contact__title">Interesting to collaborate?</h2>
+          <a className="button button--primary" href="/contacts">
+            Contact me
+          </a>
+        </div>
       </section>
     </div>
   );

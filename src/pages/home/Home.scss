@@ -7,7 +7,7 @@
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px 30px;
 }
 
 // Buttons
@@ -28,15 +28,6 @@
     color 180ms ease,
     border-color 180ms ease,
     transform 180ms ease;
-
-  //   &:hover {
-  //     transform: translateY(-2px);
-  //   }
-
-  //   &:focus-visible {
-  //     outline: 2px solid var(--color-accent);
-  //     outline-offset: 4px;
-  //   }
 
   &--primary {
     background: var(--color-primary);
@@ -64,7 +55,6 @@
   grid-template-columns: 3fr 2fr;
   align-items: center;
   gap: 20px;
-  padding: 90px 30px;
 
   &__content {
     max-width: 600px;
@@ -243,14 +233,10 @@
   background: var(--color-surface);
 
   &__icon {
-    display: grid;
+    display: block;
     width: 46px;
     height: 46px;
-    margin-bottom: 20px;
-    place-items: center;
-    border-radius: 50%;
-    background: var(--color-surface-hover);
-    font-size: 1.3rem;
+    margin: 0 auto 20px;
   }
 
   &__title {
@@ -269,24 +255,21 @@
 
 // Call to action
 
-.home-contact {
-  margin-bottom: 60px;
-  padding: 64px 28px;
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  background:
-    radial-gradient(
-      ellipse at top right,
-      rgb(118 36 119 / 18%),
-      transparent 55%
-    ),
-    var(--color-surface);
-  text-align: center;
+.contact {
+  border-top: 1px solid var(--color-border);
+
+  &__content {
+    margin-bottom: 60px;
+    padding: 64px 28px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface);
+    text-align: center;
+  }
 
   &__title {
-    margin: 0;
+    margin: 0 0 28px;
     font-size: clamp(2rem, 4vw, 3rem);
-    letter-spacing: -0.04em;
   }
 
   &__description {

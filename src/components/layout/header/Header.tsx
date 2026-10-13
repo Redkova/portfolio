@@ -1,6 +1,6 @@
 import './Header.scss';
-import ThemeToggle from '../themeToggle/ThemeToggle';
-import Navigation from '../navigation/Navigation';
+import ThemeToggle from '../../themeToggle/ThemeToggle';
+import Navigation from '../../navigation/Navigation';
 
 type HeaderProps = {
   theme: 'dark' | 'light';

@@ -1,6 +1,8 @@
+import './Footer.scss';
+
 function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <p>© {new Date().getFullYear()} Alexandra Redkova</p>
     </footer>
   );

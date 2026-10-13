@@ -85,6 +85,14 @@ function Home() {
             <a className="button button--secondary" href="/contacts">
               Contact Me
             </a>
+            <a
+              className="button button--secondary"
+              href="https://alexandra-redkova-cv.netlify.app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View CV
+            </a>
           </div>
         </div>
         <div className="about__visual">

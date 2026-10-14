@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router';
 import Layout from '../components/layout/Layout';
 import Home from '../pages/home/Home';
-import Portfolio from '../pages/Portfolio';
+import Portfolio from '../pages/portfolio/Portfolio';
 import Contacts from '../pages/Contacts';
 
 function AppRouter() {

@@ -1,4 +1,7 @@
 import './Portfolio.scss';
+import movieScreenshot from '../../../assets/screenshots/Screenshot1.png';
+import swaggerScreenshot from '../../../assets/screenshots/Screenshot2.png';
+import nonogramsScreenshot from '../../../assets/screenshots/Screenshot3.png';
 
 type Project = {
   title: string;
@@ -25,7 +28,7 @@ const projects: Project[] = [
       'Tailwind CSS',
       'Vite',
     ],
-    image: '../../assets/screenshots/Screenshot1.png',
+    image: movieScreenshot,
     imageAlt: 'Movie Search App',
     github: 'https://github.com/Redkova/react-project/tree/api-queries',
     demo: 'https://find-your-movie-rs.netlify.app',
@@ -36,7 +39,7 @@ const projects: Project[] = [
     description:
       'A collaborative final project developed by a team of three as part of the RS School programme.',
     technologies: ['React', 'TypeScript', 'Next.js', 'Vite'],
-    image: '../../assets/screenshots/Screenshot2.png',
+    image: swaggerScreenshot,
     imageAlt: 'Swagger Editor App interface',
     github: 'https://github.com/AleksPanda/swagger-editor-app/tree/develop',
     demo: 'https://swagger-editor-app-a-team.netlify.app/en',
@@ -47,7 +50,7 @@ const projects: Project[] = [
     description:
       'An interactive logic puzzle game built with vanilla JavaScript. The project focuses on game logic, user interaction, and dynamic interface updates.',
     technologies: ['JavaScript', 'HTML5', 'CSS3'],
-    image: '../../assets/screenshots/Screenshot3.png',
+    image: nonogramsScreenshot,
     imageAlt: 'Nonograms puzzle game interface',
     github: 'https://github.com/Redkova/Nonograms/tree/main/nonograms',
     demo: 'https://rolling-scopes-school.github.io/redkova-JSFE2024Q4/nonograms/index.html',

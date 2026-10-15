@@ -28,10 +28,6 @@
     border-color 0.25s ease,
     transform 0.25s ease;
 
-  &:hover {
-    border-color: var(--color-accent);
-  }
-
   &__visual {
     grid-column: 2;
     grid-row: 1;
@@ -129,13 +125,6 @@
     text-decoration: none;
     transition: color 0.2s ease;
 
-    &:hover {
-      color: var(--color-text);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      text-decoration-thickness: 1px;
-    }
-
     &:focus-visible {
       outline: 2px solid var(--color-accent);
       outline-offset: 4px;
@@ -148,5 +137,117 @@
     height: 1rem;
     background-color: var(--color-border);
     flex-shrink: 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card__link:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio__title {
+    font-size: 2.5rem;
+  }
+
+  .project-card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    padding: 16px;
+
+    &__title {
+      margin-top: 8px;
+      font-size: 1.3rem;
+    }
+
+    &__year {
+      font-size: 0.77rem;
+    }
+
+    &__description {
+      font-size: 0.95rem;
+    }
+
+    &__tag {
+      font-size: 0.8rem;
+    }
+
+    &__image {
+      min-height: 240px;
+      height: auto;
+    }
+
+    &__links {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .portfolio__projects.section {
+    padding: 48px 20px;
+  }
+
+  .portfolio__title {
+    padding-bottom: 24px;
+    font-size: 2rem;
+  }
+
+  .portfolio__list {
+    gap: 1.25rem;
+  }
+
+  .project-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 0;
+
+    &__visual {
+      grid-column: 1;
+      grid-row: 1;
+      min-height: 0;
+      padding: 12px;
+    }
+
+    &__image {
+      min-height: 0;
+      object-fit: contain;
+    }
+
+    &__content {
+      grid-column: 1;
+      grid-row: 2;
+      padding: 8px 18px 18px;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+    }
+
+    &__year {
+      margin-top: 4px;
+    }
+
+    &__description {
+      line-height: 1.65;
+    }
+
+    &__tags {
+      gap: 7px;
+    }
+
+    &__tag {
+      padding: 6px 8px;
+    }
+
+    &__links {
+      padding: 16px 0 0;
+    }
+
+    &__link {
+      font-size: 0.9rem;
+    }
   }
 }

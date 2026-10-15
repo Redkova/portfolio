@@ -1,4 +1,5 @@
 import './Home.scss';
+import profilePhoto from '../../../assets/photo.jpg';
 import runningIcon from '../../../assets/running.svg';
 import danceIcon from '../../../assets/dance.svg';
 import travelIcon from '../../../assets/travel.svg';
@@ -97,11 +98,7 @@ function Home() {
         </div>
         <div className="about__visual">
           <div className="about__image-frame">
-            <img
-              className="about__image"
-              src="../../../assets/photo.jpg"
-              alt="Photo"
-            />
+            <img className="about__image" src={profilePhoto} alt="Photo" />
             {/*Maybe remove it */}
             <div className="about__image-caption">
               <span className="about__status-dot" />

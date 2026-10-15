@@ -68,12 +68,6 @@
     text-decoration: none;
     transition: color 0.2s ease;
 
-    &:hover {
-      color: var(--color-accent);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
     &:focus-visible {
       outline: 2px solid var(--color-accent);
       outline-offset: 4px;
@@ -102,5 +96,56 @@
     width: 18px;
     height: 18px;
     flex-shrink: 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contacts__link:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contacts {
+    &__details.section {
+      padding: 70px 60px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts {
+    &__details.section {
+      padding: 56px 30px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+      font-size: 1.25rem;
+    }
+
+    &__item {
+      padding: 16px 0;
+    }
+
+    &__cv-link,
+    &__email-button {
+      padding-inline: 16px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .contacts {
+    &__details.section {
+      padding-inline: 16px;
+    }
+
+    &__actions {
+      flex-direction: column;
+    }
   }
 }

@@ -1,59 +1,6 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .home {
   width: 100%;
   overflow: hidden;
-}
-
-.section {
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 100px 30px;
-}
-
-// Buttons
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  min-height: 25px;
-  padding: 12px 22px;
-  border: 1px solid transparent;
-  border-radius: 6px;
-  font-weight: 500;
-  text-decoration: none;
-  transition:
-    background-color 180ms ease,
-    color 180ms ease,
-    border-color 180ms ease,
-    transform 180ms ease;
-
-  &--primary {
-    background: var(--color-primary);
-    color: #fff;
-
-    &:hover {
-      background: var(--color-accent);
-      color: #28152e;
-    }
-  }
-
-  &--secondary {
-    border-color: var(--color-border);
-    background: transparent;
-    color: var(--color-text);
-
-    &:hover {
-      border-color: var(--color-accent);
-    }
-  }
 }
 
 .about {
@@ -142,25 +89,6 @@
   }
 }
 
-// Section headings
-
-.section-heading {
-  margin-bottom: 40px;
-
-  &__title {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  &__description {
-    margin: 16px 0 0;
-    color: var(--color-text-muted);
-    line-height: 1.8;
-  }
-}
-
 // Skills
 
 .skills {
@@ -178,14 +106,6 @@
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background: var(--color-surface);
-  transition:
-    border-color 180ms ease,
-    transform 180ms ease;
-
-  &:hover {
-    transform: translateY(-3px);
-    border-color: var(--color-accent);
-  }
 
   &__title {
     margin: 10px 0 22px;
@@ -274,7 +194,7 @@
 
   &__title {
     margin: 0 0 28px;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: 3rem;
   }
 
   &__description {
@@ -282,5 +202,103 @@
     margin: 18px auto 28px;
     color: var(--color-text-muted);
     line-height: 1.8;
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+
+    &__title {
+      font-size: 2.2rem;
+    }
+
+    &__actions {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .interests__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact__content {
+    padding: 56px 24px;
+  }
+
+  .contact__title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 36px;
+
+    &__content {
+      max-width: none;
+    }
+
+    &__greeting {
+      margin-bottom: 14px;
+      font-size: 0.85rem;
+    }
+
+    &__title {
+      font-size: clamp(2.1rem, 9vw, 3rem);
+      line-height: 1.1;
+    }
+
+    &__description {
+      margin: 20px 0 24px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    &__actions {
+      gap: 10px;
+    }
+
+    &__visual {
+      width: min(100%, 340px);
+      justify-self: center;
+    }
+  }
+
+  .skills__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .skill-card {
+    padding: 20px;
+
+    &__title {
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+
+    &__item {
+      font-size: 0.85rem;
+    }
+  }
+
+  .interests__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .interest-card {
+    padding: 22px 18px;
+  }
+
+  .contact__content {
+    padding: 36px 20px;
+  }
+
+  .contact__title {
+    font-size: 2rem;
   }
 }

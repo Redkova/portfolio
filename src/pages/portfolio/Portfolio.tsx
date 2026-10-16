@@ -1,7 +1,8 @@
 import './Portfolio.scss';
-import movieScreenshot from '../../../assets/screenshots/Screenshot1.png';
-import swaggerScreenshot from '../../../assets/screenshots/Screenshot2.png';
-import nonogramsScreenshot from '../../../assets/screenshots/Screenshot3.png';
+import movieScreenshot from '../../../assets/screenshots/movieAppScreenshot.png';
+import swaggerScreenshot from '../../../assets/screenshots/swaggerScreenshot.png';
+import formValidationScreenshot from '../../../assets/screenshots/formValidationScreenshot.png';
+import nonogramsScreenshot from '../../../assets/screenshots/nonogramsScreenshot.png';
 
 type Project = {
   title: string;
@@ -19,37 +20,41 @@ const projects: Project[] = [
     title: 'Movie Search Application',
     year: '2026',
     description:
-      'A responsive movie discovery application featuring search, filtering, pagination, and detailed movie information. Built with React and TypeScript, with data managed through Redux Toolkit.',
-    technologies: [
-      'React',
-      'TypeScript',
-      'Redux Toolkit',
-      'React Router',
-      'Tailwind CSS',
-      'Vite',
-    ],
+      'A movie discovery application built with Next.js and TypeScript, featuring search, filtering, pagination, and detailed movie information. Implements server-side data fetching, React Server Components, and internationalization with next-intl.',
+    technologies: ['React', 'TypeScript', 'Next.js', 'next-intl'],
     image: movieScreenshot,
     imageAlt: 'Movie Search App',
-    github: 'https://github.com/Redkova/react-project/tree/api-queries',
-    demo: 'https://find-your-movie-rs.netlify.app',
+    github: 'https://github.com/Redkova/react-project/tree/nextjs-ssr',
+    demo: 'https://find-movie-rs.netlify.app/en',
   },
   {
-    title: 'Swagger Editor App',
+    title: 'Swagger Editor Application',
     year: '2026',
     description:
-      'A collaborative final project developed by a team of three as part of the RS School programme.',
-    technologies: ['React', 'TypeScript', 'Next.js', 'Vite'],
+      'A Swagger/OpenAPI editor built with Next.js and TypeScript. The application allows users to edit and validate OpenAPI specifications in JSON and YAML formats, explore API endpoints, execute requests, and review request history and server-side analytics. Developed by a team of three as the final project for the RS School programme.',
+    technologies: ['React', 'TypeScript', 'Next.js', 'Vitest', 'Tailwind CSS'],
     image: swaggerScreenshot,
     imageAlt: 'Swagger Editor App interface',
     github: 'https://github.com/AleksPanda/swagger-editor-app/tree/develop',
     demo: 'https://swagger-editor-app-a-team.netlify.app/en',
   },
   {
+    title: 'Form Validation Application',
+    year: '2026',
+    description:
+      'A React application demonstrating two approaches to form handling: uncontrolled forms and React Hook Form. Features schema-based validation with Zod and Redux Toolkit for state management.',
+    technologies: ['React', 'TypeScript', 'React Hook Form', 'Redux Toolkit'],
+    image: formValidationScreenshot,
+    imageAlt: 'Form Validation App interface',
+    github: 'https://github.com/Redkova/react-project/tree/forms',
+    demo: 'https://form-validation-rs.netlify.app',
+  },
+  {
     title: 'Nonograms',
     year: '2025',
     description:
-      'An interactive logic puzzle game built with vanilla JavaScript. The project focuses on game logic, user interaction, and dynamic interface updates.',
-    technologies: ['JavaScript', 'HTML5', 'CSS3'],
+      'An interactive logic puzzle game built with vanilla JavaScript, HTML, and CSS. Features multiple difficulty levels, sound effects, a timer, save and resume functionality, and a high score table.',
+    technologies: ['JavaScript', 'HTML5', 'CSS'],
     image: nonogramsScreenshot,
     imageAlt: 'Nonograms puzzle game interface',
     github: 'https://github.com/Redkova/Nonograms/tree/main/nonograms',

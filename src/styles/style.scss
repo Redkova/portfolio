@@ -94,6 +94,12 @@ img {
     background: transparent;
     color: var(--color-text);
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {

@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: 'Movie Search Application',
     year: '2026',
     description:
-      'A movie discovery application built with Next.js and TypeScript, featuring search, filtering, pagination, and detailed movie information. Implements server-side data fetching, React Server Components, and internationalization with next-intl.',
+      'A movie discovery application built with Next.js and TypeScript, featuring search, filtering, pagination, and detailed movie information. Implements server-side data fetching, React Server Components and internationalization with next-intl.',
     technologies: ['React', 'TypeScript', 'Next.js', 'next-intl'],
     image: movieScreenshot,
     imageAlt: 'Movie Search App',
@@ -31,7 +31,7 @@ const projects: Project[] = [
     title: 'Swagger Editor Application',
     year: '2026',
     description:
-      'A Swagger/OpenAPI editor built with Next.js and TypeScript. The application allows users to edit and validate OpenAPI specifications in JSON and YAML formats, explore API endpoints, execute requests, and review request history and server-side analytics. Developed by a team of three as the final project for the RS School programme.',
+      'A Swagger/OpenAPI editor built with Next.js and TypeScript. The application allows users to edit and validate OpenAPI specifications in JSON and YAML formats, explore API endpoints, execute requests, review request history and server-side analytics. Developed by a team of three as the final project for the RS School programme.',
     technologies: ['React', 'TypeScript', 'Next.js', 'Vitest', 'Tailwind CSS'],
     image: swaggerScreenshot,
     imageAlt: 'Swagger Editor App interface',

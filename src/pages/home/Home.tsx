@@ -1,4 +1,5 @@
 import './Home.scss';
+import { Link } from 'react-router';
 import profilePhoto from '../../../assets/photo.jpg';
 import runningIcon from '../../../assets/running.svg';
 import danceIcon from '../../../assets/dance.svg';
@@ -80,12 +81,12 @@ function Home() {
             interfaces and continuously improving my development skills.
           </p>
           <div className="about__actions">
-            <a className="button button--primary" href="/portfolio">
+            <Link className="button button--primary" to="/portfolio">
               View Projects
-            </a>
-            <a className="button button--secondary" href="/contacts">
+            </Link>
+            <Link className="button button--secondary" to="/contacts">
               Contact Me
-            </a>
+            </Link>
             <a
               className="button button--secondary"
               href="https://alexandra-redkova-cv.netlify.app"
@@ -160,9 +161,9 @@ function Home() {
       <section className="contact section">
         <div className="contact__content">
           <h2 className="contact__title">Interesting to collaborate?</h2>
-          <a className="button button--primary" href="/contacts">
+          <Link className="button button--primary" to="/contacts">
             Contact me
-          </a>
+          </Link>
         </div>
       </section>
     </div>

@@ -1,9 +1,9 @@
 import './Contacts.scss';
-import locationIcon from '../../assets/contacts/location.svg';
-import mailIcon from '../../assets/contacts/mail.svg';
-import telegramIcon from '../../assets/contacts/telegram.svg';
-import githubIcon from '../../assets/contacts/github.svg';
-import linkedinIcon from '../../assets/contacts/linkedin.svg';
+import locationIcon from '../../../assets/contacts/location.svg';
+import mailIcon from '../../../assets/contacts/mail.svg';
+import telegramIcon from '../../../assets/contacts/telegram.svg';
+import githubIcon from '../../../assets/contacts/github.svg';
+import linkedinIcon from '../../../assets/contacts/linkedin.svg';
 
 const contacts = [
   {

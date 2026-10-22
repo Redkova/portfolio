@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Hem",
+    "portfolio": "Portfolio",
+    "contacts": "Kontakt"
+  },
+  "home": {
+    "greeting": "Hej, jag heter Alexandra",
+    "jobTitle": "Front-end utvecklare",
+    "description": "Jag bygger responsiva och användarvänliga webbapplikationer med JavaScript, TypeScript och React. Jag tycker om att förvandla idéer till tydliga och funktionella gränssnitt och att ständigt utveckla mina programmeringskunskaper.",
+    "viewProjects": "Se projekt",
+    "contactMe": "Kontakta mig",
+    "viewCv": "Se mitt CV",
+    "skills": {
+      "coreTitle": "Grundläggande tekniker",
+      "frameworksTitle": "Frameworks och bibliotek",
+      "toolsTitle": "Verktyg och arbetsflöde",
+      "apiTitle": "API och integration"
+    },
+    "aboutMe": "Lite om mig",
+    "interestsDescription": "Utanför programmeringen tycker jag om att vara aktiv, vara kreativ och upptäcka nya saker",
+    "interests": {
+      "running": {
+        "title": "Löpning",
+        "description": "Att sätta upp nya mål, upptäcka nya löprundor och njuta av utsikten längs vägen"
+      },
+      "dance": {
+        "title": "Dans",
+        "description": "Commercial jazz, bra musik och friheten att uttrycka mig genom rörelse"
+      },
+      "roadTrips": {
+        "title": "Roadtrips",
+        "description": "Vackra vägar, spontana bilresor och nätter i tält under stjärnorna"
+      },
+      "boardGames": {
+        "title": "Brädspel",
+        "description": "Trevligt sällskap, smarta strategier och känslan av ett riktigt välspelat parti"
+      }
+    },
+    "collaborate": "Vill du samarbeta?"
+  },
+  "portfolio": {
+    "title": "Projekt",
+    "projects": {
+      "movie": {
+        "title": "Film­sökningsapplikation",
+        "description": "En applikation för att upptäcka och söka efter filmer, byggd med Next.js och TypeScript. Den erbjuder sökning, filtrering, paginering och detaljerad information om filmer. Applikationen använder datainhämtning på serversidan, React Server Components och internationalisering med next-intl.."
+      },
+      "swagger": {
+        "title": "Swagger Editor Application",
+        "description": "En editor för Swagger/OpenAPI byggd med Next.js och TypeScript. Applikationen gör det möjligt att redigera och validera OpenAPI-specifikationer i JSON- och YAML-format, utforska API-endpoints, skicka förfrågningar samt granska förfrågningshistorik och analysdata från servern. Projektet utvecklades av ett team på tre personer som avslutande projekt inom RS School-programmet."
+      },
+      "formValidation": {
+        "title": "Formulärvalidering",
+        "description": "En React-applikation som visar två sätt att hantera formulär: okontrollerade formulär och React Hook Form. Den innehåller schemabaserad validering med Zod och tillståndshantering med Redux Toolkit."
+      },
+      "nonograms": {
+        "title": "Nonograms",
+        "description": "Ett interaktivt logikspel byggt med vanlig JavaScript, HTML och CSS. Spelet har flera svårighetsgrader, ljudeffekter, en timer, funktioner för att spara och återuppta spel samt en topplista med bästa resultat."
+      }
+    }
+  },
+  "contacts": {
+    "title": "Kontakta mig",
+    "location": "Plats",
+    "locationValue": "Uppsala, Sverige",
+    "email": "Email",
+    "telegram": "Telegram",
+    "gitHub": "GitHub",
+    "linkedIn": "LinkedIn",
+    "viewCv": "Se mitt CV",
+    "sendEmail": "Skicka ett mejl"
+  }
+}

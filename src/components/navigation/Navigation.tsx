@@ -1,7 +1,9 @@
 import './Navigation.scss';
 import { NavLink } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 function Navigation() {
+  const { t } = useTranslation();
   return (
     <nav className="nav">
       <NavLink
@@ -11,7 +13,7 @@ function Navigation() {
           `nav__link ${isActive ? 'nav__link--active' : ''}`
         }
       >
-        Home
+        {t('nav.home')}
       </NavLink>
       <NavLink
         to="/portfolio"
@@ -19,7 +21,7 @@ function Navigation() {
           `nav__link ${isActive ? 'nav__link--active' : ''}`
         }
       >
-        Portfolio
+        {t('nav.portfolio')}
       </NavLink>
       <NavLink
         to="/contacts"
@@ -27,7 +29,7 @@ function Navigation() {
           `nav__link ${isActive ? 'nav__link--active' : ''}`
         }
       >
-        Contacts
+        {t('nav.contacts')}
       </NavLink>
     </nav>
   );

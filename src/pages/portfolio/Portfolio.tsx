@@ -3,11 +3,11 @@ import movieScreenshot from '../../../assets/screenshots/movieAppScreenshot.png'
 import swaggerScreenshot from '../../../assets/screenshots/swaggerScreenshot.png';
 import formValidationScreenshot from '../../../assets/screenshots/formValidationScreenshot.png';
 import nonogramsScreenshot from '../../../assets/screenshots/nonogramsScreenshot.png';
+import { useTranslation } from 'react-i18next';
 
 type Project = {
-  title: string;
+  key: string;
   year: string;
-  description: string;
   technologies: string[];
   image: string;
   imageAlt: string;
@@ -17,10 +17,9 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: 'Movie Search Application',
+    key: 'movie',
+
     year: '2026',
-    description:
-      'A movie discovery application built with Next.js and TypeScript, featuring search, filtering, pagination, and detailed movie information. Implements server-side data fetching, React Server Components and internationalization with next-intl.',
     technologies: ['React', 'TypeScript', 'Next.js', 'next-intl'],
     image: movieScreenshot,
     imageAlt: 'Movie Search App',
@@ -28,10 +27,8 @@ const projects: Project[] = [
     demo: 'https://find-movie-rs.netlify.app/en',
   },
   {
-    title: 'Swagger Editor Application',
+    key: 'swagger',
     year: '2026',
-    description:
-      'A Swagger/OpenAPI editor built with Next.js and TypeScript. The application allows users to edit and validate OpenAPI specifications in JSON and YAML formats, explore API endpoints, execute requests, review request history and server-side analytics. Developed by a team of three as the final project for the RS School programme.',
     technologies: ['React', 'TypeScript', 'Next.js', 'Vitest', 'Tailwind CSS'],
     image: swaggerScreenshot,
     imageAlt: 'Swagger Editor App interface',
@@ -39,10 +36,8 @@ const projects: Project[] = [
     demo: 'https://swagger-editor-app-a-team.netlify.app/en',
   },
   {
-    title: 'Form Validation Application',
+    key: 'formValidation',
     year: '2026',
-    description:
-      'A React application demonstrating two approaches to form handling: uncontrolled forms and React Hook Form. Features schema-based validation with Zod and Redux Toolkit for state management.',
     technologies: ['React', 'TypeScript', 'React Hook Form', 'Redux Toolkit'],
     image: formValidationScreenshot,
     imageAlt: 'Form Validation App interface',
@@ -50,10 +45,8 @@ const projects: Project[] = [
     demo: 'https://form-validation-rs.netlify.app',
   },
   {
-    title: 'Nonograms',
+    key: 'nonograms',
     year: '2025',
-    description:
-      'An interactive logic puzzle game built with vanilla JavaScript, HTML, and CSS. Features multiple difficulty levels, sound effects, a timer, save and resume functionality, and a high score table.',
     technologies: ['JavaScript', 'HTML5', 'CSS'],
     image: nonogramsScreenshot,
     imageAlt: 'Nonograms puzzle game interface',
@@ -63,13 +56,14 @@ const projects: Project[] = [
 ];
 
 function Portfolio() {
+  const { t } = useTranslation();
   return (
     <div className="portfolio">
       <section className="portfolio__projects section">
-        <h1 className="portfolio__title">Projects</h1>
+        <h1 className="portfolio__title">{t('portfolio.title')}</h1>
         <div className="portfolio__list">
           {projects.map((project) => (
-            <article className="project-card" key={project.title}>
+            <article className="project-card" key={project.key}>
               <div className="project-card__visual">
                 <img
                   className="project-card__image"
@@ -80,10 +74,12 @@ function Portfolio() {
               </div>
 
               <div className="project-card__content">
-                <h2 className="project-card__title">{project.title}</h2>
+                <h2 className="project-card__title">
+                  {t(`portfolio.projects.${project.key}.title`)}
+                </h2>
                 <div className="project-card__year">{project.year}</div>
                 <p className="project-card__description">
-                  {project.description}
+                  {t(`portfolio.projects.${project.key}.description`)}
                 </p>
 
                 {project.technologies.length > 0 && (

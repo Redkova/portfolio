@@ -5,20 +5,21 @@ import runningIcon from '../../../assets/running.svg';
 import danceIcon from '../../../assets/dance.svg';
 import travelIcon from '../../../assets/travel.svg';
 import gameIcon from '../../../assets/games.svg';
+import { useTranslation } from 'react-i18next';
 
 const skills = [
   {
-    title: 'Core Technologies',
+    titleKey: 'coreTitle',
     description: 'The foundations I use to build web interfaces.',
     items: ['JavaScript', 'TypeScript', 'HTML5', 'CSS', 'SCSS'],
   },
   {
-    title: 'Frameworks & Libraries',
+    titleKey: 'frameworksTitle',
     description: 'Tools for building modern, component-based web applications.',
     items: ['React', 'Tailwind CSS', 'Redux Toolkit', 'Next.js'],
   },
   {
-    title: 'Tools & Workflow',
+    titleKey: 'toolsTitle',
     description:
       'Tools for maintaining an efficient and consistent development process.',
     items: [
@@ -34,7 +35,7 @@ const skills = [
     ],
   },
   {
-    title: 'API & Integration',
+    titleKey: 'apiTitle',
     description:
       'Technologies for connecting applications and enabling real-time communication.',
     items: ['Rest API', 'WebSockets'],
@@ -44,48 +45,37 @@ const skills = [
 const interests = [
   {
     icon: runningIcon,
-    title: 'Running',
-    description:
-      'Chasing new goals, exploring new routes and enjoying the views along the way.',
+    key: 'running',
   },
   {
     icon: danceIcon,
-    title: 'Dance',
-    description:
-      'Commercial jazz, great music and the freedom to express myself through movement.',
+    key: 'dance',
   },
   {
     icon: travelIcon,
-    title: 'Road Trips',
-    description:
-      'Scenic routes, spontaneous road trips and nights spent camping under the stars',
+    key: 'roadTrips',
   },
   {
     icon: gameIcon,
-    title: 'Board Games',
-    description:
-      'Good company, clever strategies and the satisfaction of a well-played game.',
+    key: 'boardGames',
   },
 ];
 
 function Home() {
+  const { t } = useTranslation();
   return (
     <div className="home">
       <section className="about section">
         <div className="about__content">
-          <p className="about__greeting">Hello, I'm Alexandra</p>
-          <h1 className="about__title">Front-end Developer</h1>
-          <p className="about__description">
-            I build responsive, user-friendly web applications with JavaScript,
-            TypeScript and React. I enjoy turning ideas into clean, functional
-            interfaces and continuously improving my development skills.
-          </p>
+          <p className="about__greeting">{t('home.greeting')}</p>
+          <h1 className="about__title">{t('home.jobTitle')}</h1>
+          <p className="about__description">{t('home.description')}</p>
           <div className="about__actions">
             <Link className="button button--primary" to="/portfolio">
-              View Projects
+              {t('home.viewProjects')}
             </Link>
             <Link className="button button--secondary" to="/contacts">
-              Contact Me
+              {t('home.contactMe')}
             </Link>
             <a
               className="button button--secondary"
@@ -93,7 +83,7 @@ function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              View CV
+              {t('home.viewCv')}
             </a>
           </div>
         </div>
@@ -115,8 +105,10 @@ function Home() {
         </div>
         <div className="skills__grid">
           {skills.map((group) => (
-            <article className="skill-card" key={group.title}>
-              <h3 className="skill-card__title">{group.title}</h3>
+            <article className="skill-card" key={group.titleKey}>
+              <h3 className="skill-card__title">
+                {t(`home.skills.${group.titleKey}`)}
+              </h3>
               <ul className="skill-card__list">
                 {group.items.map((skill) => (
                   <li className="skill-card__item" key={skill}>
@@ -131,16 +123,15 @@ function Home() {
 
       <section className="interests section" id="interest">
         <div className="section-heading">
-          <h2 className="section-heading__title">A Little About Me</h2>
+          <h2 className="section-heading__title">{t('home.aboutMe')}</h2>
           <p className="section-heading__description">
-            Outside of development, I enjoy staying active, being creative and
-            finding new experiences.
+            {t('home.interestsDescription')}
           </p>
         </div>
 
         <ul className="interests__grid">
           {interests.map((interest) => (
-            <li className="interest-card" key={interest.title}>
+            <li className="interest-card" key={interest.key}>
               <img
                 className="interest-card__icon"
                 src={interest.icon}
@@ -148,10 +139,12 @@ function Home() {
                 aria-hidden="true"
               />
 
-              <h3 className="interest-card__title">{interest.title}</h3>
+              <h3 className="interest-card__title">
+                {t(`home.interests.${interest.key}.title`)}
+              </h3>
 
               <p className="interest-card__description">
-                {interest.description}
+                {t(`home.interests.${interest.key}.description`)}
               </p>
             </li>
           ))}
@@ -160,9 +153,9 @@ function Home() {
 
       <section className="contact section">
         <div className="contact__content">
-          <h2 className="contact__title">Interesting to collaborate?</h2>
+          <h2 className="contact__title">{t('home.collaborate')}</h2>
           <Link className="button button--primary" to="/contacts">
-            Contact me
+            {t('home.contactMe')}
           </Link>
         </div>
       </section>

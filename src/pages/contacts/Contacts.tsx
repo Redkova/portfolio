@@ -4,33 +4,34 @@ import mailIcon from '../../../assets/contacts/mail.svg';
 import telegramIcon from '../../../assets/contacts/telegram.svg';
 import githubIcon from '../../../assets/contacts/github.svg';
 import linkedinIcon from '../../../assets/contacts/linkedin.svg';
+import { useTranslation } from 'react-i18next';
 
 const contacts = [
   {
-    label: 'Location',
-    value: 'Uppsala, Sweden',
+    key: 'location',
+    valueKey: 'locationValue',
     icon: locationIcon,
   },
   {
-    label: 'Email',
+    key: 'email',
     value: 'mrs.redkovaa@gmail.com',
     href: 'mailto:mrs.redkovaa@gmail.com',
     icon: mailIcon,
   },
   {
-    label: 'Telegram',
+    key: 'telegram',
     value: '@redkova',
     href: 'https://t.me/redkova',
     icon: telegramIcon,
   },
   {
-    label: 'GitHub',
+    key: 'gitHub',
     value: 'github.com/Redkova',
     href: 'https://github.com/Redkova',
     icon: githubIcon,
   },
   {
-    label: 'LinkedIn',
+    key: 'linkedIn',
     value: 'linkedin.com/in/redkova',
     href: 'https://www.linkedin.com/in/redkova/',
     icon: linkedinIcon,
@@ -38,13 +39,14 @@ const contacts = [
 ];
 
 function Contacts() {
+  const { t } = useTranslation();
   return (
     <div className="contacts">
       <section className="contacts__details section">
-        <h1 className="contacts__title">Get in touch</h1>
+        <h1 className="contacts__title">{t('contacts.title')}</h1>
         <ul className="contacts__list">
           {contacts.map((contact) => (
-            <li className="contacts__item" key={contact.label}>
+            <li className="contacts__item" key={contact.key}>
               <img
                 className="contacts__icon"
                 src={contact.icon}
@@ -52,7 +54,9 @@ function Contacts() {
                 aria-hidden="true"
               />
               <div className="contacts__item-content">
-                <span className="contacts__label">{contact.label}</span>
+                <span className="contacts__label">
+                  {t(`contacts.${contact.key}`)}
+                </span>
 
                 {contact.href ? (
                   <a
@@ -66,7 +70,11 @@ function Contacts() {
                     {contact.value}
                   </a>
                 ) : (
-                  <span className="contacts__value">{contact.value}</span>
+                  <span className="contacts__value">
+                    {'valueKey' in contact
+                      ? t(`contacts.${contact.valueKey}`)
+                      : contact.value}
+                  </span>
                 )}
               </div>
             </li>
@@ -79,7 +87,7 @@ function Contacts() {
             target="_blank"
             rel="noreferrer"
           >
-            <span>View CV</span>
+            <span>{t('contacts.viewCv')}</span>
           </a>
 
           <a
@@ -92,7 +100,7 @@ function Contacts() {
               alt=""
               aria-hidden="true"
             />
-            <span>Send an email</span>
+            <span>{t('contacts.sendEmail')}</span>
           </a>
         </div>
       </section>

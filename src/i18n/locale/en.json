@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "contacts": "Contacts"
+  },
+  "home": {
+    "greeting": "Hello, I'm Alexandra",
+    "jobTitle": "Front-end Developer",
+    "description": "I build responsive, user-friendly web applications with JavaScript, TypeScript and React. I enjoy turning ideas into clean, functional interfaces and continuously improving my development skills.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "viewCv": "View CV",
+    "skills": {
+      "coreTitle": "Core Technologies",
+      "frameworksTitle": "Frameworks & Libraries",
+      "toolsTitle": "Tools & Workflow",
+      "apiTitle": "API & Integration"
+    },
+    "aboutMe": "A Little About Me",
+    "interestsDescription": "Outside of development, I enjoy staying active, being creative and finding new experiences",
+    "interests": {
+      "running": {
+        "title": "Running",
+        "description": "Chasing new goals, exploring new routes and enjoying the views along the way"
+      },
+      "dance": {
+        "title": "Dance",
+        "description": "Commercial jazz, great music and the freedom to express myself through movement"
+      },
+      "roadTrips": {
+        "title": "Road Trips",
+        "description": "Scenic routes, spontaneous road trips and nights spent camping under the stars"
+      },
+      "boardGames": {
+        "title": "Board Games",
+        "description": "Good company, clever strategies and the satisfaction of a well-played game"
+      }
+    },
+    "collaborate": "Interested to collaborating?"
+  },
+  "portfolio": {
+    "title": "Projects",
+    "projects": {
+      "movie": {
+        "title": "Movie Search Application",
+        "description": "A movie discovery application built with Next.js and TypeScript, featuring search, filtering, pagination, and detailed movie information. Implements server-side data fetching, React Server Components and internationalization with next-intl."
+      },
+      "swagger": {
+        "title": "Swagger Editor Application",
+        "description": "A movie discovery application built with Next.js and TypeScript, featuring search, filtering, pagination, and detailed movie information. Implements server-side data fetching, React Server Components and internationalization with next-intl."
+      },
+      "formValidation": {
+        "title": "Form Validation Application",
+        "description": "A React application demonstrating two approaches to form handling: uncontrolled forms and React Hook Form. Features schema-based validation with Zod and Redux Toolkit for state management."
+      },
+      "nonograms": {
+        "title": "Nonograms",
+        "description": "An interactive logic puzzle game built with vanilla JavaScript, HTML, and CSS. Features multiple difficulty levels, sound effects, a timer, save and resume functionality, and a high score table."
+      }
+    }
+  },
+  "contacts": {
+    "title": "Get in touch",
+    "location": "Location",
+    "locationValue": "Uppsala, Sweden",
+    "email": "Email",
+    "telegram": "Telegram",
+    "gitHub": "GitHub",
+    "linkedIn": "LinkedIn",
+    "viewCv": "View CV",
+    "sendEmail": "Send an email"
+  }
+}

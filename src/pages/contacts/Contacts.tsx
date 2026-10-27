@@ -83,7 +83,7 @@ function Contacts() {
         <div className="contacts__actions">
           <a
             className="button button--secondary contacts__cv-link"
-            href="https://alexandra-redkova-cv.netlify.app"
+            href="https://redkova-alexandra-cv.netlify.app"
             target="_blank"
             rel="noreferrer"
           >

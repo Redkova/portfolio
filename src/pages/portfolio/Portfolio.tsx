@@ -47,11 +47,11 @@ const projects: Project[] = [
   {
     key: 'nonograms',
     year: '2025',
-    technologies: ['JavaScript', 'HTML5', 'CSS'],
+    technologies: ['JavaScript', 'HTML5', 'Sass(SCSS)', 'Vite'],
     image: nonogramsScreenshot,
     imageAlt: 'Nonograms puzzle game interface',
-    github: 'https://github.com/Redkova/Nonograms/tree/main/nonograms',
-    demo: 'https://rolling-scopes-school.github.io/redkova-JSFE2024Q4/nonograms/index.html',
+    github: 'https://github.com/Redkova/Nonograms/tree/develop',
+    demo: 'https://nonograms-redkova.netlify.app',
   },
 ];
 

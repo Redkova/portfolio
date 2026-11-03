@@ -56,7 +56,7 @@
       },
       "nonograms": {
         "title": "Nonograms",
-        "description": "Ett interaktivt logikspel byggt med vanlig JavaScript, HTML och CSS. Spelet har flera svårighetsgrader, ljudeffekter, en timer, funktioner för att spara och återuppta spel samt en topplista med bästa resultat."
+        "description": "Ett interaktivt logikspel byggt med vanlig JavaScript, HTML och Sass(SCSS). Spelet har flera svårighetsgrader, ljudeffekter, en timer, funktioner för att spara och återuppta spel samt en topplista med bästa resultat."
       }
     }
   },

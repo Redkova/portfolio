@@ -48,7 +48,7 @@
       },
       "swagger": {
         "title": "Swagger Editor Application",
-        "description": "A movie discovery application built with Next.js and TypeScript, featuring search, filtering, pagination, and detailed movie information. Implements server-side data fetching, React Server Components and internationalization with next-intl."
+        "description": "An editor for Swagger/OpenAPI built with Next.js and TypeScript. The application allows users to edit and validate OpenAPI specifications in JSON and YAML formats, explore API endpoints, send requests and review request history and server-side analytics data. The project was developed by a team of three as a final project for the RS School course."
       },
       "formValidation": {
         "title": "Form Validation Application",

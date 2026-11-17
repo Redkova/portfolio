@@ -3,6 +3,7 @@ import movieScreenshot from '../../../assets/screenshots/movieAppScreenshot.png'
 import swaggerScreenshot from '../../../assets/screenshots/swaggerScreenshot.png';
 import formValidationScreenshot from '../../../assets/screenshots/formValidationScreenshot.png';
 import nonogramsScreenshot from '../../../assets/screenshots/nonogramsScreenshot.png';
+import portfolioScreenshot from '../../../assets/screenshots/portfolioScreenshot.png';
 import { useTranslation } from 'react-i18next';
 
 type Project = {
@@ -12,7 +13,7 @@ type Project = {
   image: string;
   imageAlt: string;
   github: string;
-  demo: string;
+  demo?: string;
 };
 
 const projects: Project[] = [
@@ -52,6 +53,14 @@ const projects: Project[] = [
     imageAlt: 'Nonograms puzzle game interface',
     github: 'https://github.com/Redkova/Nonograms/tree/develop',
     demo: 'https://nonograms-redkova.netlify.app',
+  },
+  {
+    key: 'portfolio',
+    year: '2026',
+    technologies: ['React', 'TypeScript', 'Vite', 'React Router', 'i18next'],
+    image: portfolioScreenshot,
+    imageAlt: 'Personal portfolio interface',
+    github: 'https://github.com/Redkova/portfolio/tree/develop',
   },
 ];
 
@@ -105,17 +114,23 @@ function Portfolio() {
                   >
                     GitHub
                   </a>
+                  {project.demo && (
+                    <>
+                      <span
+                        className="project-card__divider"
+                        aria-hidden="true"
+                      />
 
-                  <span className="project-card__divider" aria-hidden="true" />
-
-                  <a
-                    className="project-card__link"
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Live Demo
-                  </a>
+                      <a
+                        className="project-card__link"
+                        href={project.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Live Demo
+                      </a>
+                    </>
+                  )}
                 </div>
               </div>
             </article>

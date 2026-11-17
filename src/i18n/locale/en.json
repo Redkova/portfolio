@@ -57,6 +57,10 @@
       "nonograms": {
         "title": "Nonograms",
         "description": "An interactive logic puzzle game built with vanilla JavaScript, HTML, and Sass(SCSS). Features multiple difficulty levels, sound effects, a timer, save and resume functionality, and a high score table."
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "A personal portfolio website built with React, TypeScript and Vite. It features responsive layouts, English and Swedish localization and light and dark themes."
       }
     }
   },
